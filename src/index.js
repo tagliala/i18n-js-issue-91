@@ -1,9 +1,5 @@
-function component() {
-  const element = document.createElement('div')
+import { I18n } from 'i18n-js'
 
-  element.textContent = 'Hello World'
+const i18n = new I18n({ 'en' : { 'hello_world' : 'Hello World' } })
 
-  return element
-}
-
-document.body.appendChild(component())
+console.log(i18n.t('hello_world'))
